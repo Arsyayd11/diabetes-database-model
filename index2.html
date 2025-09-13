@@ -314,16 +314,16 @@
         <div class="main-content">
             <!-- Tab Navigation -->
             <div class="tabs">
-                <button class="tab-button active" onclick="switchTab('manual')">
-                    📝 Manual Input
+                <button class="tab-button active" onclick="switchTab('sql')">
+                    SQL Database
                 </button>
-                <button class="tab-button" onclick="switchTab('sql')">
-                    🗃️ SQL Database
+                <button class="tab-button" onclick="switchTab('manual')">
+                    Manual Input
                 </button>
             </div>
 
             <!-- Manual Input Tab -->
-            <div id="manual-tab" class="tab-content active">
+            <div id="manual-tab" class="tab-content">
                 <h2>Enter Patient Information Manually</h2>
                 <form id="manual-form">
                     <div class="form-grid">
@@ -365,7 +365,7 @@
             </div>
 
             <!-- SQL Database Tab -->
-            <div id="sql-tab" class="tab-content">
+            <div id="sql-tab" class="tab-content active">
                 <h2>Select Patient from Database</h2>
                 
                 <div style="margin-bottom: 20px;">
@@ -552,7 +552,8 @@
                                 Select
                             </button>
                         </td>
-                        <td title="${record.id}">${record.id.substring(0, 8)}...</td>
+                        
+                        <td title="${record.id}">${record.id}</td>
                         <td>${record.pregnancies}</td>
                         <td>${record.glucose}</td>
                         <td>${record.blood_pressure}</td>
